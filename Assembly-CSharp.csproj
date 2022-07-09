@@ -210,10 +210,11 @@
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Scripts\Interfaces\IImageAppearanceProvider.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
     <Compile Include="Assets\Scripts\Remake\GameLinker.cs" />
+    <Compile Include="Assets\Scripts\MuteAudio.cs" />
     <Compile Include="Assets\Scripts\Bells\BellsManager.cs" />
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Example\Ghost\FollowMouse.cs" />
     <Compile Include="Assets\ScriptsNext\Pools.cs" />
-    <Compile Include="Assets\Scripts\MuteAudio.cs" />
+    <Compile Include="Assets\Scripts\LoadGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Resources\Materials\HueSaturationBrightness.shader" />
