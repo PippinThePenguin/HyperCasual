@@ -28,7 +28,7 @@ namespace HyperCasualNamespace {
 
     private GameColor ChooseColor() {
       //Debug.Log(ScoreController._currentScore + "Pig");
-      if ((ScoreController._currentScore > 500 * (ScoreController.colorRange - 1)) && (ScoreController.colorRange < 6)) {
+      if ((ScoreController._currentScore > 500 * (ScoreController.colorRange - 1) - 350) && (ScoreController.colorRange < 6)) {
         ScoreController.colorRange++;
         //Debug.Log(ScoreController.colorRange + "yes");
         return (GameColor)ScoreController.colorRange;

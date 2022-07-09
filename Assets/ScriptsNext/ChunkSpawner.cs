@@ -29,7 +29,7 @@ namespace HyperCasualNamespace {
       SpeedController.MainSpeedController.OnSpeedChange.AddListener(SpeedUpdate);
       Pool = Pools.ComponentPool;
       Score = FindObjectOfType<ScoreController>();
-      spawnIndex = 0;
+      spawnIndex = 5;
       PopulateList();
       PopulateList1();
       PopulateList2();

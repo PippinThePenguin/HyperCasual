@@ -132,7 +132,7 @@ namespace HyperCasualNamespace {
     }
 
     private void SubtracktScore(ObjectStats stats) {
-      _currentScore -= stats.Value * stats.Modificator * 2;
+      _currentScore -= stats.Value * stats.Modificator * 1;
       CameraShaker.Instance.ShakeOnce(1.2f, 3f, 0.1f, 0.1f);
       if (_audioManager)
         _audioManager.Play("WrongCoin");

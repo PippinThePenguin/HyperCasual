@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: new Profile
   m_EditorClassIdentifier: 
   name: Piggy
-  MaxScore: 0
+  MaxScore: 20
+  IsMuted: 0

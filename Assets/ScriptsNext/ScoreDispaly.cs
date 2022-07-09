@@ -59,6 +59,7 @@ namespace HyperCasualNamespace {
       _postGameScoreMessage.text = new ScoreDecorator().GetScoreMessege(_scoreController._currentScore);
       if (_scoreController._currentScore > _currentProfile.MaxScore) {
         _postGameRecordMessage.gameObject.SetActive(true);
+        _postGameScore.gameObject.GetComponent<Animator>().enabled = true;
       }
       //_scoreText.gameObject.SetActive(false);
       _gameUI.SetActive(false);
