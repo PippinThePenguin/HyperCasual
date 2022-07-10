@@ -133,6 +133,7 @@
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\SizeModifiers\FloatSizeModifier.cs" />
     <Compile Include="Assets\Scripts\Bells\SingleBell.cs" />
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\Transitions\AnimationTransitions.cs" />
+    <Compile Include="Assets\Scripts\LoadGame.cs" />
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiElements\Transitions\CustomTransition.cs" />
     <Compile Include="Assets\ScriptsNext\RoadScript.cs" />
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Scripts\BetterUiLayout\SizeModifiers\MarginSizeModifier.cs" />
@@ -214,7 +215,7 @@
     <Compile Include="Assets\Scripts\Bells\BellsManager.cs" />
     <Compile Include="Assets\ExternalAssets\TheraBytes\BetterUI\Example\Ghost\FollowMouse.cs" />
     <Compile Include="Assets\ScriptsNext\Pools.cs" />
-    <Compile Include="Assets\Scripts\LoadGame.cs" />
+    <Compile Include="Assets\ScriptsNext\TrainingMoney.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalAssets\TheraBytes\BetterUI\Runtime\Resources\Materials\HueSaturationBrightness.shader" />

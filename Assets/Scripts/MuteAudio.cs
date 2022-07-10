@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HyperCasualNamespace {
   public class MuteAudio : MonoBehaviour {
     private bool isMuted;
-    [SerializeField] GameObject _muieUI;
+    [SerializeField] private GameObject _sound, _noSound;
 
     private void Start() {
       SetAudio(!ProfileScriptable.CurrentProfile.IsMuted);
@@ -15,12 +15,14 @@ namespace HyperCasualNamespace {
       isMuted = !isMuted;
       ProfileScriptable.CurrentProfile.IsMuted = isMuted;
       AudioListener.volume = isMuted ? 0f : 1f;
-      _muieUI.SetActive(isMuted);
+      _sound.SetActive(!isMuted);
+      _noSound.SetActive(isMuted);
     }
 
     public void SetAudio(bool audio) {
       AudioListener.volume = audio ? 1f : 0f;
-      _muieUI.SetActive(!audio);
+      _sound.SetActive(audio);
+      _noSound.SetActive(!audio);
     }
   }
 }

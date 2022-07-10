@@ -15,6 +15,7 @@ namespace HyperCasualNamespace {
       foreach (GameObject i in _toEnable)
         i.SetActive(false);
       colorManager.ColorAction += EnableFunc;
+      EnableFunc();
     }
     public void EnableFunc() {
       ColorObjectManager colManager = FindObjectOfType<ColorObjectManager>();

@@ -36,6 +36,6 @@ Material:
     - Vector1_3fea34e1f7a043f8aeaad2e43460916f: 22.5
     - Vector1_6e4d295c563a45a0a9dca6b6987a085b: 1
     - Vector1_8072a5e46e154bd2881d40e60366f9a9: 1
-    - WhiteBool: 0
+    - WhiteBool: 1
     m_Colors: []
   m_BuildTextureStacks: []

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace HyperCasualNamespace {
   public class VisualColorMaster : MonoBehaviour {
+    public static VisualColorMaster CurrentMaster;
     [SerializeField] private Texture _whiteMap, _blackMap, _pinkMap, _redMap, _greenMap, _blueMap;
     [SerializeField] private Material _playerMaterial, _worldMaterial;
     [SerializeField] private Material _gridMaterial, _peaksMaterial;
@@ -16,6 +17,7 @@ namespace HyperCasualNamespace {
 
 
     void Awake() {
+      CurrentMaster = this;
       if (_glichObj == null) {
         _glichObj = FindObjectOfType<GlichController>().gameObject;
       }
@@ -23,14 +25,11 @@ namespace HyperCasualNamespace {
       _worldMaterial.SetTexture("_BaseMap", _whiteMap);
     }
 
-    // Start is called before the first frame update
     void Start() {
       if (_glichObj == null) {
         _glichObj = FindObjectOfType<GlichController>().gameObject;
       }
     }
-
-
 
     private void Update() {
       

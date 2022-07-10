@@ -4,21 +4,27 @@ using UnityEngine;
 
 namespace HyperCasualNamespace {
   public class TestMoney : MonoBehaviour {
-    [SerializeField] private ScoreController _scoreController;
-    private VisualColorMaster _visualColorMaster;
-    private Mover _mover;
-    private GameColor color = 0;
+    [SerializeField] protected ScoreController _scoreController;
+    [SerializeField] protected VisualColorMaster _visualColorMaster;
+    protected Mover _mover;
+    protected GameColor color = 0;
 
     private void Start() {
       color = 0;
-      _visualColorMaster = FindObjectOfType<VisualColorMaster>();
-      
+      if (_visualColorMaster == null) {
+        _visualColorMaster = VisualColorMaster.CurrentMaster;
+      }
+
     }
 
-    private void OnEnable() {
-      color = 0;
-      _scoreController = ScoreController.Controller;
-      _visualColorMaster = FindObjectOfType<VisualColorMaster>();
+    protected virtual void OnEnable() {
+      color = 0;      
+      if (_scoreController == null) {
+        _scoreController = ScoreController.Controller;
+      }
+      if (_visualColorMaster == null) {
+        _visualColorMaster = VisualColorMaster.CurrentMaster;
+      }     
       if (Random.value > 0.4 + _scoreController.colorRange * 0.05) {
         color = (GameColor)Random.Range(1, _scoreController.colorRange + 1);
       } else {

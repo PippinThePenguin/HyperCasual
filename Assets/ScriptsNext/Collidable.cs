@@ -10,7 +10,9 @@ namespace HyperCasualNamespace {
     public Mover _selfMover;
 
     protected virtual void OnEnable() {
-      ScoreController = ScoreController.Controller;
+      if (ScoreController == null) {
+        ScoreController = ScoreController.Controller;
+      }      
       if (_selfMover == null) {
         _selfMover = transform.GetComponent<Mover>();
       }    

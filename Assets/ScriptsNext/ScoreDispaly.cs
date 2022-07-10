@@ -95,7 +95,7 @@ namespace HyperCasualNamespace {
     public void Restart() {
       _currentProfile.SetMaxScore(_scoreController._currentScore);
       Debug.Log("AAAAAA " + _currentProfile.MaxScore);
-      SceneManager.LoadScene(0);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }  
   }
 }
