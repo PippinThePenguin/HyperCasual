@@ -1,4 +1,0 @@
-repository "HyperCasual@Poggyback_org@cloud"
-  path "/"
-    br "/main"
-    co "/main"

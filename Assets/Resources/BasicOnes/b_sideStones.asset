@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 677606b6f391ec046996957957ae81fc, type: 3}
-  m_Name: b_coins2
+  m_Name: b_sideStones
   m_EditorClassIdentifier: 
   name: 
   MainChunkInfo:
-  - Tag: CoinLine
+  - Tag: RockFormation1
     TrackPosition: 1
-    ZPosition: 80
-    Rotation: 0
-  - Tag: CoinLine
-    TrackPosition: 3
-    ZPosition: 40
-    Rotation: 0
-  - Tag: CoinLine
+    ZPosition: 7
+    Rotation: 46
+  - Tag: RockFormation1
     TrackPosition: 5
-    ZPosition: 0
+    ZPosition: 7
+    Rotation: -40
+  - Tag: RockFormation
+    TrackPosition: 4
+    ZPosition: 7
     Rotation: 0
-  ChunkLength: 85
+  ChunkLength: 20

@@ -8,13 +8,16 @@ namespace HyperCasualNamespace {
 
     public new string name;
     public int MaxScore;
+    public int CashedScore;
     public bool IsMuted;
+    public bool IsBought;
     public static ProfileScriptable CurrentProfile;
 
     public ProfileScriptable(string n) {
       name = n;
       MaxScore = 0;
       IsMuted = false;
+      IsBought = false;
     }
 
     public void SetActive(bool rewrite) {
@@ -28,6 +31,11 @@ namespace HyperCasualNamespace {
         MaxScore = score;
       }
       return MaxScore;
+    }
+
+    public void EndGame() {
+      SetMaxScore(CashedScore);
+      CashedScore = 0;
     }
   }
   public class ScoreDecorator {

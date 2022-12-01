@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 677606b6f391ec046996957957ae81fc, type: 3}
-  m_Name: b_coins2
+  m_Name: b_twoSacuras
   m_EditorClassIdentifier: 
   name: 
   MainChunkInfo:
-  - Tag: CoinLine
-    TrackPosition: 1
-    ZPosition: 80
-    Rotation: 0
-  - Tag: CoinLine
-    TrackPosition: 3
-    ZPosition: 40
-    Rotation: 0
-  - Tag: CoinLine
+  - Tag: Sacura2
     TrackPosition: 5
     ZPosition: 0
     Rotation: 0
-  ChunkLength: 85
+  - Tag: Sacura1
+    TrackPosition: 3
+    ZPosition: 60
+    Rotation: 58
+  - Tag: CoinLine
+    TrackPosition: 1
+    ZPosition: 0
+    Rotation: 0
+  ChunkLength: 75

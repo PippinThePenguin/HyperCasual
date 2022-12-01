@@ -1,2 +1,0 @@
-C:\Users\Piglet_PC\Fish_pro\HyperCasual\obj\Debug\UnityEditor.UI.csproj.AssemblyReference.cache
-C:\Users\Piglet_PC\Fish_pro\HyperCasual\obj\Debug\UnityEditor.UI.csproj.CoreCompileInputs.cache

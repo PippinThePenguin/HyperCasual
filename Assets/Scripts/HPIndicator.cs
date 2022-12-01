@@ -28,9 +28,18 @@ public class HPIndicator : MonoBehaviour
     _part.transform.position = Camera.main.ScreenToWorldPoint(_hpList[currHealth].transform.position + new Vector3 (0f, 0f, 40f));
     _part.Play();
   }
-  public void ResetHP() {
-    currHealth = 4;
-    foreach(GameObject i in _hpList)
+  public void ResetHP(int howMany = 4) {
+    if (howMany > 4)
+      return;
+    currHealth = howMany;
+    for (int i = 0; i < howMany; i++) {
+      _hpList[i].SetActive(true);
+    }
+    /*
+    foreach(GameObject i in _hpList) {
       i.SetActive(true);
+    }
+    */
+      
   }
 }

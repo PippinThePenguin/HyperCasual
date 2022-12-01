@@ -26,8 +26,8 @@ public class GlichController : MonoBehaviour
     _glichObj.GetComponent<Renderer>().material.SetFloat("GlichLevel", _glichLevel);
   }
 
-  public void Reset() {
-    _glichLevel = 0;
+  public void Reset(int currHP = 4) {
+    _glichLevel = 4 - currHP;
     RecalculateGlich();
   }
 }

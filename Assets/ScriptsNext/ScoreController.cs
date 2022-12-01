@@ -10,7 +10,7 @@ namespace HyperCasualNamespace {
   public class ScoreController : MonoBehaviour {
     public static ScoreController Controller;
     private int _healthPoints;
-    [SerializeField] private int _defaultHealthPoints = 4;
+    [SerializeField] private int _defaultHealthPoints = 2;
     public int _currentScore;
     public GameColor _currentPlayerColor;
     public Dictionary<GameColor, int> _colorCounter;
@@ -54,7 +54,7 @@ namespace HyperCasualNamespace {
       //HpIndicator = FindObjectOfType<HPIndicator>();
 
       OnNewGame();
-    }        
+    }
 
     public void ProcessInteraction(ObjectStats stats) {
       if (stats.ObjectType == ObjectType.Colored && stats.Color == _currentPlayerColor) {
@@ -82,6 +82,7 @@ namespace HyperCasualNamespace {
           if (_audioManager)
             _audioManager.Play("Hit");
           PlayerDeath();
+          InvincibleFrames();
 
         } else {
           if (_audioManager)
@@ -143,7 +144,7 @@ namespace HyperCasualNamespace {
     public void OnNewGame() {
       //Time.timeScale = 1f;
       ResetColor();
-      ResetValues();
+      ResetValues(_defaultHealthPoints);
       ResetCounter();
     }
 
@@ -159,10 +160,10 @@ namespace HyperCasualNamespace {
         _colorCounter.Add(c, 0);
       }
     }
-    public void ResetValues() {
-      _healthPoints = _defaultHealthPoints;
-      HpIndicator.ResetHP();
-      _glichController.Reset();
+    public void ResetValues(int newHp) {
+      _healthPoints = newHp;
+      HpIndicator.ResetHP(newHp);
+      _glichController.Reset(newHp);
            
     }
 

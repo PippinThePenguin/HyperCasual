@@ -1,2 +1,0 @@
-C:\Users\Piglet_PC\Fish_pro\HyperCasual\obj\Debug\Unity.RenderPipelines.Core.Runtime.csproj.AssemblyReference.cache
-C:\Users\Piglet_PC\Fish_pro\HyperCasual\obj\Debug\Unity.RenderPipelines.Core.Runtime.csproj.CoreCompileInputs.cache

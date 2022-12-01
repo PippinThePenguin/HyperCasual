@@ -16,11 +16,7 @@ MonoBehaviour:
   MainChunkInfo:
   - Tag: CoinLine
     TrackPosition: 1
-    ZPosition: 50
-    Rotation: 0
-  - Tag: CoinLine
-    TrackPosition: 5
-    ZPosition: 50
+    ZPosition: 100
     Rotation: 0
   - Tag: OneBamboo
     TrackPosition: 1
@@ -32,6 +28,10 @@ MonoBehaviour:
     Rotation: 180
   - Tag: Sacura1
     TrackPosition: 3
-    ZPosition: 66
+    ZPosition: 60
     Rotation: -15
-  ChunkLength: 70
+  - Tag: CoinLine
+    TrackPosition: 5
+    ZPosition: 100
+    Rotation: 0
+  ChunkLength: 120

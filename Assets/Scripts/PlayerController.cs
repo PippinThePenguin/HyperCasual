@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
   private Vector3 _lastPosition;
   private Vector3 _currPosition;
   [SerializeField] private float _step = 0f;
-  [SerializeField] private float _stepStep = 0.5f;
+  [SerializeField] private float _stepStep = 0.25f;
   
   [SerializeField] private float prev;
 

@@ -10,19 +10,43 @@ namespace HyperCasualNamespace {
     [SerializeField] private bool _testMode = true;
     [SerializeField] private Button _adsButton;
     private string _gameId = "4725307"; //ваш game id
+    private string _video = "Interstitial_Android";
     private string _rewardedVideo = "Rewarded_Android";
     public UnityEvent ContinueEvent;
+    public UnityEvent ReloadEvent;
 
     void Awake() {
-      ContinueEvent = new UnityEvent();
+      //ContinueEvent = new UnityEvent();
+      ContinueEvent.RemoveAllListeners();
+      ReloadEvent.RemoveAllListeners();
     }
     void Start() {     
       Advertisement.AddListener(this);
       Advertisement.Initialize(_gameId, true);
     }
 
-    public void ShowRewardedVideo() {
-      Advertisement.Show(_rewardedVideo);
+    public bool AdsReadyness() {
+      if (Advertisement.IsReady()) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    public bool ShowRewardedVideo() {
+      if (Advertisement.IsReady()) {      
+        Advertisement.Show(_rewardedVideo);
+        return true;
+      } else {
+        return false;
+      }
+    }
+    public void ShowAdsVideo() {
+      if (Advertisement.IsReady()) {
+        Advertisement.Show(_video);
+      } else {
+        ReloadEvent?.Invoke();
+      }
     }
 
     public void OnUnityAdsReady(string placementId) {
@@ -42,6 +66,7 @@ namespace HyperCasualNamespace {
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult) //обработка рекламы (тут определеяем вознаграждение)
     {
       if (showResult == ShowResult.Finished) {
+        //ContinueEvent?.Invoke();
         if (placementId == "Rewarded_Android") {
           ContinueEvent?.Invoke();                   
         }
@@ -51,6 +76,10 @@ namespace HyperCasualNamespace {
         //действия, если пользователь пропустил рекламу
       } else if (showResult == ShowResult.Failed) {
         //действия при ошибке
+      }
+
+      if (placementId == "Interstitial_Android") {
+        ReloadEvent?.Invoke();
       }
     }
   }

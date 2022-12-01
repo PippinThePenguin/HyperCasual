@@ -26,4 +26,4 @@ MonoBehaviour:
     TrackPosition: 5
     ZPosition: 80
     Rotation: 0
-  ChunkLength: 95
+  ChunkLength: 85
